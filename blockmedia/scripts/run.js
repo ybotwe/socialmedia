@@ -5,6 +5,7 @@ const main = async () =>{
     console.log("Contract deployed to:", contract.address);
     const contractName = await contract.name();
     console.log("Contract name:", contractName);
+    await contract.createPost("This is me first Post!");
 }
 
 
