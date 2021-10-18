@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 
@@ -9,7 +9,7 @@
           <p>{{post.0}}</p>
         </div>
         <div class="post-card-content">
-          <p class="p-small text-gray">October 15, 2021 | 12:24 PM</p>
+        
           <p class="p-large">{{ post.1 }}</p>
           <p class="p-large">{{ post.2 }}</p>
           <p class="p-xsmall text-gray">{{ post.3 }}</p>
@@ -18,9 +18,8 @@
             <input type="submit" value="TIP AUTHOR" /> 
           </form>
         </div>
-      </div>
-      
     </div>
+      
   {% endfor %}
   
 

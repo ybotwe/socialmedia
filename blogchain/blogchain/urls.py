@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from posts import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('posts/new/', views.new_post, name='new_post'),
     path('', views.posts_list, name='home'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

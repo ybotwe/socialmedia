@@ -204,7 +204,7 @@ def posts_list(request):
             pid = form.cleaned_data.get("post_id")
             new_address = str(address)
             nonce = web3.eth.getTransactionCount(new_address)
-            print(posts[pid-1][3])
+            # print(posts[pid-1][3])
             tx = contract.functions.tipPost(pid).buildTransaction({
                 # 'to': str(posts[pid - 1][3]),
                 'from': web3.toChecksumAddress(new_address),
